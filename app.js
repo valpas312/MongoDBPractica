@@ -1,4 +1,4 @@
-import { URL } from "./constantes";
+import { URL } from "./constantes.js";
 import { MongoClient } from "mongodb";
 
 async function main() {
