@@ -1,0 +1,11 @@
+MongoDB ofrece una amplia variedad de etapas de agregación y operadores para realizar análisis y transformaciones de datos más complejos.
+
+En este ejemplo, se realiza una agregación en la colección "documents". El pipeline de agregación consta de varias etapas:
+
+$match: Esta etapa filtra los documentos basado en una condición. En el ejemplo, se filtran los documentos donde el campo "age" es mayor a 30.
+
+$group: Esta etapa agrupa los documentos según un campo específico y realiza una operación de agregación en los grupos. En el ejemplo, se agrupan los documentos por la categoría ("category") y se calcula la suma de documentos en cada categoría.
+
+$sort: Esta etapa ordena los resultados en función de un campo específico. En el ejemplo, se ordenan los resultados en orden descendente según la suma total.
+
+$limit: Esta etapa limita los resultados a un número específico de documentos. En el ejemplo, se limita el resultado a los primeros 5 documentos.
