@@ -1,0 +1,8 @@
+Creamos los datos de geolocalizacion previamente a crear la query
+
+Creamos un indice global para que mongoDB reconozca busquedas avanzadas de geolocalizacion y
+no nos de errores
+
+Creamos la query y buscamos segun especificaciones especiales para geolocalizacion
+
+Hacemos un forEach de las coordenadas que trae para poder mostrarlas
