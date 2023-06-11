@@ -1,0 +1,5 @@
+MongoDB ofrece una amplia gama de operadores y funcionalidades para realizar consultas más avanzadas.
+
+El metodo project nos permite decicir que datos queremos que nos devuelva la consulta, por ejemplo, si queremos que nos devuelva solo el nombre y el apellido, sin que nos devuelva el ObjectId de Mongo de los usuarios podemos hacer lo siguiente:
+
+.project({"_id": 0, "name": 1, "surname": 1})
