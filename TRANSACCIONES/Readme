@@ -1,0 +1,18 @@
+El control de transacciones en MongoDB permite ejecutar operaciones en una transacción que garantiza la consistencia y la integridad de los datos.
+Una transacción agrupa un conjunto de operaciones y asegura que todas se completen correctamente o que se deshagan en caso de error.
+
+En este ejemplo, se utiliza el método startSession para crear una nueva sesión de transacción. Luego, se inicia la transacción con el método startTransaction. Todas las operaciones dentro de la transacción deben usar la sesión proporcionada.
+
+En el ejemplo, se realiza una inserción de un documento y una actualización de un documento dentro de la transacción. Puedes agregar más operaciones según tus necesidades.
+
+Después de ejecutar todas las operaciones, se utiliza commitTransaction para confirmar la transacción y guardar los cambios. Si ocurre algún error durante la transacción, se utiliza abortTransaction para deshacer los cambios y revertir la transacción.
+
+Es importante destacar que las transacciones en MongoDB requieren un conjunto de réplicas o un clúster particionado (sharded cluster) para admitir transacciones distribuidas.
+
+El { session } en las constantes result1 y result2 es una opción que se pasa a los métodos insertOne() y updateOne() respectivamente. Esta opción indica a MongoDB que la operación debe ser ejecutada en la sesión de transacción especificada.
+
+Cuando se trabaja con transacciones en MongoDB, es necesario proporcionar la sesión a todas las operaciones que deseas incluir en la transacción. Esto asegura que todas las operaciones se realicen en el contexto de la misma transacción y sean tratadas como una unidad atómica.
+
+En el ejemplo que te proporcioné, se crea una sesión de transacción utilizando client.startSession(). Luego, esta sesión se pasa como opción a las operaciones insertOne() y updateOne() mediante { session }. Esto indica que estas operaciones deben ser realizadas en el contexto de la sesión de transacción especificada.
+
+Al proporcionar la sesión a estas operaciones, MongoDB las ejecutará dentro de la transacción en lugar de ejecutarlas de forma aislada y no transaccional.
