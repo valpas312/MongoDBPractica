@@ -1,0 +1,9 @@
+INDICES TTL(TIME-TO-LIVE)
+
+Los índices TTL en MongoDB permiten definir una ventana de tiempo después de la cual los documentos expiran y se eliminan automáticamente de la colección.
+Esto es útil para datos que tienen una vida útil definida, como registros de actividad, mensajes temporales o eventos programados.
+
+INDICES DE TEXTO CON PESO
+
+Los índices de texto con peso en MongoDB permiten realizar búsquedas de texto completo en los campos de texto de los documentos.
+Puedes asignar un peso a cada campo para priorizar los resultados en función de su relevancia.
